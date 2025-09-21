@@ -1,0 +1,31 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# OS / Editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Python tools (no usas Poetry, PDM, etc.)
+poetry.lock
+pdm.lock
+.pdm.toml
+.pdm-python
+__pypackages__/
+
+# Tu archivo de credenciales (si lo creas)
+config.ini

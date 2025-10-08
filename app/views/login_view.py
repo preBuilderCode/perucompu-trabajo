@@ -8,10 +8,10 @@ def login_view():
 
     
     if username == "admin" and password == "1234":
-        print("✅ Inicio de sesión exitoso.")
+        print("Inicio de sesión exitoso.")
         input("Presione Enter para continuar...")
         mostrar_menu_home()
        
     else:
-        print("❌ Usuario o contraseña incorrectos.")
+        print("Usuario o contraseña incorrectos.")
         input("Presione Enter para intentar de nuevo...")

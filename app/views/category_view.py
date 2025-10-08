@@ -24,7 +24,7 @@ def mostrar_menu_gestion_categorias():
         elif op == "5":
             break
         else:
-            print("❌ Opción no válida.")
+            print("Opción no válida.")
             input("Presione Enter para continuar...")
 
 
@@ -49,7 +49,7 @@ def registrar_categoria():
     }
 
     categorias.append(categoria)
-    print(f"✅ Categoría '{nombre}' registrada.")
+    print(f"Categoría '{nombre}' registrada.")
     input("Presione Enter para continuar...")
 
 
@@ -71,7 +71,7 @@ def modificar_categoria():
     c = buscar_categoria_por_id(id_categoria)
 
     if not c:
-        print("❌ Categoría no encontrada.")
+        print("Categoría no encontrada.")
         input("Presione Enter para continuar...")
         return
 
@@ -79,7 +79,7 @@ def modificar_categoria():
     c['nombre'] = input(f"Nuevo nombre ({c['nombre']}): ") or c['nombre']
     c['descripcion'] = input(f"Descripción ({c['descripcion']}): ") or c['descripcion']
 
-    print(f"✅ Categoría actualizada: {c['nombre']}")
+    print(f"Categoría actualizada: {c['nombre']}")
     input("Presione Enter para continuar...")
 
 
@@ -90,10 +90,10 @@ def eliminar_categoria():
     c = buscar_categoria_por_id(id_categoria)
 
     if not c:
-        print("❌ Categoría no encontrada.")
+        print("categoría no encontrada.")
         input("Presione Enter para continuar...")
         return
 
     categorias.remove(c)
-    print(f"✅ Categoría '{c['nombre']}' eliminada.")
+    print(f"Categoría '{c['nombre']}' eliminada.")
     input("Presione Enter para continuar...")

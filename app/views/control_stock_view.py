@@ -10,9 +10,9 @@ def mostrar_menu_control_stock():
         productos_bajo_stock = [p for p in productos if int(p['stock']) < STOCK_MINIMO]
 
         if not productos_bajo_stock:
-            print("✅ No hay productos con stock bajo.")
+            print("No hay productos con stock bajo.")
         else:
-            print("⚠️  Productos con stock bajo:")
+            print("Productos con stock bajo:")
             for p in productos_bajo_stock:
                 print(f"  • {p['nombre']} (ID: {p['id']}) - Stock: {p['stock']} (mínimo: {STOCK_MINIMO})")
 
@@ -26,7 +26,7 @@ def mostrar_menu_control_stock():
         elif opcion == "2":
             break
         else:
-            print("❌ Opción no válida.")
+            print("Opción no válida.")
             input("Presione Enter para continuar...")
 
 
@@ -42,7 +42,7 @@ def actualizar_stock():
             break
 
     if not producto:
-        print("❌ Producto no encontrado.")
+        print("Producto no encontrado.")
         input("Presione Enter para continuar...")
         return
 
@@ -52,8 +52,8 @@ def actualizar_stock():
     try:
         cantidad = int(cantidad)
         producto['stock'] = str(int(producto['stock']) + cantidad) 
-        print(f"✅ Stock actualizado: {producto['nombre']} ahora tiene {producto['stock']} unidades.")
+        print(f"Stock actualizado: {producto['nombre']} ahora tiene {producto['stock']} unidades.")
     except ValueError:
-        print("❌ Cantidad inválida.")
+        print("Cantidad inválida.")
 
     input("Presione Enter para continuar...")

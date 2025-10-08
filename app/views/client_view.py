@@ -24,7 +24,7 @@ def mostrar_menu_gestion_clientes():
         elif op == "5":
             break
         else:
-            print("❌ Opción no válida.")
+            print("Opción no válida.")
             input("Presione Enter para continuar...")
 
 
@@ -53,7 +53,7 @@ def registrar_cliente():
     }
 
     clientes.append(cliente)
-    print(f"✅ Cliente '{nombre}' registrado.")
+    print(f"Cliente '{nombre}' registrado.")
     input("Presione Enter para continuar...")
 
 
@@ -75,7 +75,7 @@ def modificar_cliente():
     c = buscar_cliente_por_id(id_cliente)
 
     if not c:
-        print("❌ Cliente no encontrado.")
+        print("Cliente no encontrado.")
         input("Presione Enter para continuar...")
         return
 
@@ -85,7 +85,7 @@ def modificar_cliente():
     c['email'] = input(f"Email ({c['email']}): ") or c['email']
     c['direccion'] = input(f"Dirección ({c['direccion']}): ") or c['direccion']
 
-    print(f"✅ Cliente actualizado: {c['nombre']}")
+    print(f"Cliente actualizado: {c['nombre']}")
     input("Presione Enter para continuar...")
 
 
@@ -96,10 +96,10 @@ def eliminar_cliente():
     c = buscar_cliente_por_id(id_cliente)
 
     if not c:
-        print("❌ Cliente no encontrado.")
+        print("Cliente no encontrado.")
         input("Presione Enter para continuar...")
         return
 
     clientes.remove(c)
-    print(f"✅ Cliente '{c['nombre']}' eliminado.")
+    print(f"Cliente '{c['nombre']}' eliminado.")
     input("Presione Enter para continuar...")
